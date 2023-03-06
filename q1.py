@@ -1,17 +1,21 @@
 
 # ******************************
-num1 = int(input())
+count = 0
+prev = 1
+flag = False
 
-while True:
-    num2 = int(input())
-    
-    if num1 % 2 == 0 and num2 % 2 == 0:
-        print(num1, num2, end=' ')
-        break
-    
-    num1 = num2
+for i in range(10):
+    num = int(input())
+    if num % 2 == 0 and prev % 2 == 0:
+        if flag == False:
+            count += 1
+            flag = True
+    else:
+        flag = False
+    prev = num
 
-print()
+print(count)
+    
 # ******************************
 
 
